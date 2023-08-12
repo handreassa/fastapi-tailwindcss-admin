@@ -1,6 +1,6 @@
 # Admin Dashboard using FastAPI and Tailwind CSS
 
-This project provides a way to serve admin dashboards using FastAPI and Tailwind CSS based on the Django admin format.
+This project provides a way to serve admin/analytical dashboards using FastAPI and Tailwind CSS based on the Django admin format.
 
 ## Customization
 
