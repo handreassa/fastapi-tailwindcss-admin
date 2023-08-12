@@ -16,7 +16,8 @@ class UnicornException(Exception):
 
 @app.get("/")
 async def root(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
+    return {"message": "Hello World"}
+    # return templates.TemplateResponse("home.html", {"request": request})
 
 @app.get("/chart")
 async def root(request: Request):
