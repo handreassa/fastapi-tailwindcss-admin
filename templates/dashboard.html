@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    #map, #bar-chart {
+      height: 400px; /* Adjust height as needed */
+    }
+  </style>
+</head>
+<body class="bg-gray-100 h-full">
+  <div class="h-full flex flex-col">
+    <!-- Sidebar -->
+    <div class="flex flex-no-wrap h-full">
+      <div class="w-64 bg-gray-800 text-white flex-shrink-0 h-full">
+        <div class="px-8 py-4">
+          <h1 class="text-2xl font-semibold">Admin Dashboard</h1>
+        </div>
+        <nav class="mt-5">
+          <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">Dashboard</a>
+          <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">Users</a>
+          <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">Settings</a>
+          <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">Profile</a>
+          <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">Logout</a>
+        </nav>
+      </div>
+      
+      <!-- Main content -->
+      <div class="flex-grow flex flex-col h-full">
+        <!-- Top bar -->
+        <header class="bg-white shadow">
+          <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+              <div>
+                <h1 class="text-3xl font-semibold text-gray-800">Dashboard</h1>
+              </div>
+              <div>
+                <img class="h-10 w-10 rounded-full object-cover" src="https://via.placeholder.com/150" alt="User avatar">
+              </div>
+            </div>
+          </div>
+        </header>
+        
+        <!-- Main dashboard content -->
+        <main class="p-6 flex-grow overflow-y-auto">
+          <div class="container mx-auto">
+            <!-- Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+              <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h2 class="text-lg font-semibold text-gray-700">Total Users</h2>
+                <p class="mt-2 text-2xl font-bold text-gray-800">1,234</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h2 class="text-lg font-semibold text-gray-700">New Users</h2>
+                <p class="mt-2 text-2xl font-bold text-gray-800">123</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h2 class="text-lg font-semibold text-gray-700">Total Sales</h2>
+                <p class="mt-2 text-2xl font-bold text-gray-800">$12,345</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h2 class="text-lg font-semibold text-gray-700">New Orders</h2>
+                <p class="mt-2 text-2xl font-bold text-gray-800">45</p>
+              </div>
+            </div>
+
+            <!-- Map and Bar Chart -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+              <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h2 class="text-lg font-semibold text-gray-700 mb-4">Map</h2>
+                <div id="map" class="rounded-lg shadow-inner bg-gray-200">
+                </div>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h2 class="text-lg font-semibold text-gray-700 mb-4">Bar Chart</h2>
+                <div id="bar-chart" class="rounded-lg shadow-inner bg-gray-200"></div>
+              </div>
+            </div>
+            
+            <!-- Table -->
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+              <h2 class="text-lg font-semibold text-gray-700 mb-4">Recent Activity</h2>
+              <table class="min-w-full bg-white">
+                <thead>
+                  <tr>
+                    <th class="py-2 px-4 border-b border-gray-200 text-left">Date</th>
+                    <th class="py-2 px-4 border-b border-gray-200 text-left">User</th>
+                    <th class="py-2 px-4 border-b border-gray-200 text-left">Activity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="py-2 px-4 border-b border-gray-200">2024-06-27</td>
+                    <td class="py-2 px-4 border-b border-gray-200">John Doe</td>
+                    <td class="py-2 px-4 border-b border-gray-200">Logged in</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 px-4 border-b border-gray-200">2024-06-27</td>
+                    <td class="py-2 px-4 border-b border-gray-200">Jane Smith</td>
+                    <td class="py-2 px-4 border-b border-gray-200">Updated profile</td>
+                  </tr>
+                  <!-- More rows here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
